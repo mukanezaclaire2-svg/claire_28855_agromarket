@@ -93,10 +93,5 @@ The project will use Oracle PL/SQL to manage database operations.
 
 AgroMarket aims to improve agricultural marketing through technology. By connecting farmers directly with customers, the system will support farmers, improve access to food products, and contribute to reducing food waste.
 
----
 
-**Project Name:** AgroMarket  
-**Student:** Claire  
-**Student ID:** 28855  
-**Repository:** claire_28855_agroMarket  
-**Visibility:** Public
+
