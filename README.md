@@ -1,97 +1,88 @@
 # AgroMarket – Agriculture and Food Marketplace System
 
-## 1. Project Information
+## Project Information
 
-- **Project Title:** AgroMarket – Agriculture and Food Marketplace System
-- **Student Name:** Claire
+- **Project Name:** AgroMarket
+- **Student Name:MUKANEZA Claire
 - **Student ID:** 28855
-- **Project Category:** Agriculture and Food Technology
-- **Project Phase:** Phase 0 – Project Planning
+- **Phase:** Phase I – Business Process Modeling
+- **Modeling Tool:** diagrams.net (draw.io)
 
-## 2. Problem Statement
+## Project Description
 
-Many farmers face difficulties accessing markets and finding customers for their agricultural products. This can lead to food waste and reduced income. Customers also experience difficulties finding fresh agricultural products at affordable prices.
+AgroMarket is an Agriculture and Food Marketplace System designed to connect farmers with customers through an online platform. The system aims to make agricultural products easier to find, improve product and stock management, and simplify the ordering process.
 
-## 3. Project Objectives
+The system allows farmers to list their agricultural products, manage prices and quantities, and receive customer orders. Customers can browse products, check availability, and place orders.
 
-### General Objective
-To develop an agricultural marketplace system that connects farmers with customers and improves the buying and selling of agricultural products.
+## Phase I – Business Process Modeling
 
-### Specific Objectives
-- To register and manage farmers and customers.
-- To allow farmers to add and manage agricultural products.
-- To display available agricultural products and their prices.
-- To allow customers to place orders.
-- To manage customer orders and sales.
-- To improve market access and reduce food waste.
+### 1. Business Process Definition
 
-## 4. Data Sources
+**Business Process:** Agricultural Product Ordering and Stock Management.
 
-**FAOSTAT – Food and Agriculture Organization**
+This process connects farmers with customers through the AgroMarket system. It allows farmers to manage agricultural product listings and stock while customers browse products and place orders.
 
-Website: https://www.fao.org/faostat/en/
+The process aims to improve agricultural product accessibility, simplify order management, maintain accurate stock records, and improve communication between farmers and customers.
 
-FAOSTAT provides agricultural statistics and information about crop production, food supply, livestock, and food availability. These data will support the agricultural information used in the project.
+The expected outcome is a successfully recorded order, communicated to the farmer, and properly reflected in the stock records.
 
-## 5. Planned Innovation
+### 2. Actors and Responsibilities
 
-AgroMarket introduces a digital marketplace that connects farmers directly with customers. Farmers will advertise their products, update prices and availability, and receive customer orders. Customers will easily find and order fresh agricultural products online.
-
-## 6. Planned Database Tables
-
-The system will use Oracle Database to store and manage information.
-
-| Table Name | Description |
+| Actor | Responsibility |
 |---|---|
-| FARMERS | Stores farmer information. |
-| CUSTOMERS | Stores customer information. |
-| CATEGORIES | Stores agricultural product categories. |
-| PRODUCTS | Stores product names, prices, quantities and descriptions. |
-| ORDERS | Stores customer order information. |
-| ORDER_DETAILS | Stores products included in each order. |
-| PAYMENTS | Stores payment records and status. |
+| Farmer | Adds products, sets prices and quantities, updates product information, and manages customer orders. |
+| Customer | Browses agricultural products, checks availability, selects products, and places orders. |
+| AgroMarket System | Stores product and order records, checks stock availability, records orders, and updates stock and order status. |
+| Administrator | Manages users, monitors activities, and supervises system information. |
 
-## 7. Planned PL/SQL Features
+### 3. Business Process Model
 
-The project will use Oracle PL/SQL to manage database operations.
+The business process is modeled using a UML Activity Diagram with swimlanes to show the responsibilities of the customer, AgroMarket system, and farmer.
 
-- **Procedures:** Register farmers, register customers, add products, and manage orders.
-- **Functions:** Calculate order totals and check product availability.
-- **Triggers:** Automatically update product quantities after confirmed orders.
-- **Cursors:** Retrieve and display product and order information.
-- **Records:** Organize and process farmer, customer, and product information.
-- **Collections:** Manage multiple products and order details.
-- **Exception Handling:** Handle errors such as insufficient stock and invalid customer orders.
-- **Sequences:** Automatically generate unique IDs.
-- **Packages:** Organize related procedures and functions.
+The diagram includes:
+- Start and end events.
+- Activities and tasks.
+- Decision points and alternative paths.
+- Actors in swimlanes.
+- Sequence and information flows.
+- Activities that interact with database records.
 
-## 8. Technologies to Be Used
+**Modeling Tool:** diagrams.net (draw.io)
 
-- **Frontend:** HTML, CSS, JavaScript.
-- **Backend:** PHP.
-- **Database:** Oracle Database 21c Express Edition (XE).
-- **Database Programming:** Oracle PL/SQL.
-- **Database Development Tool:** Oracle SQL Developer.
-- **Code Editor:** Visual Studio Code.
-- **Version Control:** Git and GitHub.
+**Published Diagram Link:** [Insert your published diagram link here]
 
-## 9. Expected Outcomes
+### 4. Data-Generating Activities (CRUD)
 
-- Improved market access for farmers.
-- Easier access to fresh food products.
-- Reduced agricultural food waste.
-- Better management of agricultural products and orders.
-- Improved communication between farmers and customers.
+| Activity | Operation | Information |
+|---|---|---|
+| Register customer or farmer | Create | User details and contact information |
+| Add agricultural product | Create | Product name, price, quantity and description |
+| Browse products | Retrieve | Product information and availability |
+| Check stock | Retrieve | Available and requested quantities |
+| Place an order | Create | Order ID, customer, product, quantity and date |
+| Update product details | Update | Product price, description and quantity |
+| Update order status | Update | Order status and processing information |
+| Update stock | Update | Remaining product quantity |
+| Remove discontinued product | Delete/Archive | Product record or archived product details |
 
-## 10. References
+## Documents
 
-1. Food and Agriculture Organization (FAO). FAOSTAT. https://www.fao.org/faostat/en/
-2. Oracle. Oracle Database Documentation. https://docs.oracle.com/en/database/
-3. Oracle. PL/SQL Language Reference. https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/
+The Phase I documentation is organized in the following structure:
 
-## 11. Conclusion
+```text
+AgroMarket/
+├── README.md
+└── docs/
+    └── business_process/
+        ├── business_process_diagram.pdf
+        └── business_process_explanation.pdf
+```
 
-AgroMarket aims to improve agricultural marketing through technology. By connecting farmers directly with customers, the system will support farmers, improve access to food products, and contribute to reducing food waste.
+## Tools Used
 
+- diagrams.net (draw.io) – Business process modeling.
+- GitHub – Project documentation and version control.
 
+## Conclusion
 
+The Agricultural Product Ordering and Stock Management process provides a structured way to manage agricultural product listings, customer orders, and stock information. The process supports better communication between farmers and customers, improves operational efficiency, and provides a foundation for the future database and system development of AgroMarket.
