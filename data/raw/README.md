@@ -3,7 +3,7 @@
 ## Project Information
 
 - **Project Name:** AgroMarket – Agriculture and Food Marketplace System
-- **Student Name:** Claire
+- **Student Name:**MUKANEZA Claire
 - **Student ID:** 28855
 - **Course:** INSY 8311 – Database Development with PL/SQL
 - **Phase:** Phase II – Data Sourcing, Normalization and Logical Design
