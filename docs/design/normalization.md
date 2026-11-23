@@ -57,3 +57,47 @@ A partial dependency is removed by separating attributes that depend on only par
 ### Conclusion
 The dataset is evaluated for partial dependencies to ensure that non-key attributes depend on the whole key. Any required decomposition must be justified using the actual data.
 UNF is the starting point for normalization. The data will be reorganized into related tables to reduce repetition and improve data organization.
+
+## 4. Third Normal Form (3NF)
+
+Third Normal Form requires a table to be in 2NF and to have no transitive dependencies between non-key attributes.
+
+### Proposed Tables
+
+**COUNTRY**
+- country_id (PK)
+- country_name
+
+**ITEM**
+- item_id (PK)
+- item_name
+
+**ELEMENT**
+- element_id (PK)
+- element_name
+
+**UNIT**
+- unit_id (PK)
+- unit_name
+
+**YEAR**
+- year_id (PK)
+- year_value
+
+**OBSERVATION**
+- observation_id (PK)
+- country_id (FK)
+- item_id (FK)
+- element_id (FK)
+- unit_id (FK)
+- year_id (FK)
+- value
+
+### Changes from 2NF to 3NF
+Repeated descriptive information is separated into related tables. The OBSERVATION table stores foreign keys to the related entities rather than repeatedly storing their descriptive names.
+
+### Dependency Removed
+Descriptive information is stored in its own tables, so observation records reference those entities using foreign keys.
+
+### Conclusion
+The proposed design separates countries, items, elements, units and years from observations. This design aims to reduce duplication and improve data consistency. The dependencies and fields must be verified against the actual dataset before finalizing the logical design.
